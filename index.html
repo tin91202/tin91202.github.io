@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>数芽芽 · 小学数学学习伙伴</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- 知识点详情弹窗 -->
+    <div class="modal-overlay" id="modalOverlay" hidden>
+      <div class="modal-panel">
+        <button class="modal-close" id="modalClose">×</button>
+        <h3 class="modal-title" id="modalTitle"></h3>
+        <div class="modal-body" id="modalBody"></div>
+        <button class="modal-done" id="modalDone">我学会啦！</button>
+      </div>
+    </div>
+
+  <!-- ====== 宠物选择页（首次进入显示） ====== -->
+  <div class="pet-select-overlay" id="petSelectOverlay">
+    <div class="pet-select-panel">
+      <h1 class="pet-select-title">🐾 选一只陪你学数学的伙伴吧</h1>
+      <p class="pet-select-subtitle">它会一直陪着你，学习越努力，它越开心哦～</p>
+      <div class="pet-grid" id="petGrid">
+        <div class="pet-option" data-pet="lion">
+          <img src="images/pets/lion.png" alt="狮子">
+          <span>狮子</span>
+        </div>
+        <div class="pet-option" data-pet="cat">
+          <img src="images/pets/cat.png" alt="猫咪">
+          <span>猫咪</span>
+        </div>
+        <div class="pet-option" data-pet="dog">
+          <img src="images/pets/dog.png" alt="小狗">
+          <span>小狗</span>
+        </div>
+        <div class="pet-option" data-pet="goat">
+          <img src="images/pets/goat.png" alt="山羊">
+          <span>山羊</span>
+        </div>
+        <div class="pet-option" data-pet="cow">
+          <img src="images/pets/cow.png" alt="奶牛">
+          <span>奶牛</span>
+        </div>
+        <div class="pet-option" data-pet="fox">
+          <img src="images/pets/fox.png" alt="狐狸">
+          <span>狐狸</span>
+        </div>
+        <div class="pet-option" data-pet="rabbit">
+          <img src="images/pets/rabbit.png" alt="兔子">
+          <span>兔子</span>
+        </div>
+        <div class="pet-option" data-pet="zebra">
+          <img src="images/pets/zebra.png" alt="斑马">
+          <span>斑马</span>
+        </div>
+      </div>
+             <div style="text-align: center; margin-top: 32px;">
+  <button class="pet-confirm-btn" id="petConfirmBtn" disabled>确认选择</button>
+</div>
+    </div>
+  </div>
+
+  <!-- ====== 主应用 ====== -->
+  <div class="app" id="app" hidden>
+
+    <!-- 顶部导航 -->
+     <header class="topbar">
+  <div class="logo">
+    <span class="logo-icon">🌱</span>
+    <span class="logo-text">数芽芽</span>
+  </div>
+  <div class="user-area">
+    <div class="user-avatar" id="userAvatar">👤</div>
+    <span class="user-name" id="userName">小朋友</span>
+  </div>
+</header>
+
+
+    <div class="main-wrapper">
+
+      <!-- 左侧菜单 -->
+      <aside class="sidebar">
+        <ul class="sidebar-menu">
+          <li><a href="#" class="sidebar-link active" data-module="home"><span class="icon">🏠</span>首页</a></li>
+          <li><a href="#" class="sidebar-link" data-module="knowledge"><span class="icon">📚</span>知识点</a></li>
+          <li><a href="#" class="sidebar-link" data-module="quiz"><span class="icon">✏️</span>测验</a></li>
+          <li><a href="#" class="sidebar-link" data-module="ai"><span class="icon">💬</span>AI答疑</a></li>
+          <li><a href="#" class="sidebar-link" data-module="report"><span class="icon">📊</span>学习报告</a></li>
+          <li><a href="#" class="sidebar-link" data-module="profile"><span class="icon">👤</span>个人中心</a></li>
+        </ul>
+      </aside>
+
+      <!-- 主内容区 -->
+      <main class="content" id="content">
+        <!-- 由 JS 动态渲染 -->
+      </main>
+
+    </div>
+
+    <!-- 右下角宠物 -->
+    <div class="pet-float" id="petFloat">
+      <div class="pet-bubble" id="petBubble"></div>
+      <img class="pet-image" id="petImage" src="" alt="我的宠物">
+    </div>
+
+  </div>
+  <script src="data/quiz.js"></script>
+  <script src="data/knowledge.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
